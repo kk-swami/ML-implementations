@@ -1,0 +1,12 @@
+Name,Year,Encoder/Decoder/Both,num_layers,d_token,d_attention_head,num_attention_heads,max_seq_length,# of tokens trained on,Batch-size,LR (10-4),num_parameters,activation function,Positional Embedding,Cost Function,Other details,dataset
+BERT-base,2018,Encoder,12,768,,12,512,,,,100MM,GeLU,,MLM + Next sentence prediction,,"Book-corpora + English Wikipedia, "
+BERT-large,2018,Encoder,24,1024,,16,512,,,,340MM,GeLU,,MLM + Next sentence prediction,,
+GPT-1,2018,Decoder,12,768,,12,512,,64,,117MM,GeLU,,Next word prediction,,Book-corpora
+GPT-2 (XL version),2019,Decoder,48,1600,,25,1024,,512,,1.5B,GeLU,,Next word prediction,,Webtext (web data)
+GPT-3 Large aka GPT-3,2020,Decoder,96,12288,,96,2048,300B,3.2M,0.6,175B,GeLU,Absolute Position Embedding,Next word prediction,,
+GPT-4,,,,,,,,,,,,,,Next word prediction,,
+Llama-1 (largest),2022,Decoder,80,8192,,64,2048,1.4T,4M,1.5,65B,SwiGLU,Rotary position Embedding,Next word prediction,,"67% CC, 15% C4, 4.5% Github, 4.5% books, 2.5% arxiv, 2.5% stackexchange"
+Llama-2 (largest),2023,Decoder,, ,,,4096,2T,4M,1.5,70B,SwiGLU,Rotary position Embedding,Next word prediction,Used grouped-query attention,
+RoBERTA-large,2019,Encoder,24,1024,,16,,,,,355MM,,,MLM,,"Book-corpora + English Wikipedia,  CC-News,  OpenWebText, Stories"
+T5 (Large),2020,Encoder-Decoder,24,1024,,128,,,,,11B,ReLU,Relative positional embedding,"span masking as a machine translation task
+Example  :Input : Thank you <X> me to your party <Y> week, target : <X> for inviting <Y> last",,C4
